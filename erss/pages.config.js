@@ -1,0 +1,168 @@
+import { defineUniPages } from '@uni-helper/vite-plugin-uni-pages'
+import { appName } from './src/settings/index.mjs'
+
+export default defineUniPages({
+  easycom: {
+    autoscan: true,
+    custom: {
+      '^wd-(.*)': 'wot-design-uni/components/wd-$1/wd-$1.vue',
+      '^(?!z-paging-refresh|z-paging-load-more)z-paging(.*)': 'z-paging/components/z-paging$1/z-paging$1.vue',
+    },
+  },
+  pages: [
+    {
+      path: 'pages/index/index',
+      aliasPath: '/index',
+      name: 'home',
+      style: {
+        navigationStyle: 'custom',
+      },
+    },
+    {
+      path: 'pages/category/index',
+      aliasPath: '/category',
+      name: 'category',
+      style: {
+        navigationStyle: 'custom',
+      },
+    },
+    {
+      path: 'pages/publish/index',
+      aliasPath: '/publish',
+      name: 'publish',
+      style: {
+        navigationStyle: 'custom',
+      },
+    },
+    {
+      path: 'pages/message/index',
+      aliasPath: '/message',
+      name: 'message',
+      style: {
+        navigationStyle: 'custom',
+      },
+    },
+    {
+      path: 'pages/wallet/index',
+      aliasPath: '/wallet',
+      name: 'wallet',
+      style: {
+        navigationStyle: 'custom',
+      },
+    },
+    {
+      path: 'pages/mine/index',
+      aliasPath: '/mine',
+      name: 'mine',
+      style: {
+        navigationStyle: 'custom',
+      },
+    },
+    {
+      path: 'pages/login/index',
+      aliasPath: '/login',
+      name: 'login',
+      style: {
+        navigationStyle: 'custom',
+      },
+    },
+    {
+      path: 'pages/settings/index',
+      aliasPath: '/settings',
+      name: 'settings',
+      style: {
+        navigationStyle: 'custom',
+      },
+    },
+    {
+      path: 'pages/shop/index',
+      aliasPath: '/shop',
+      name: 'shop',
+      style: {
+        navigationStyle: 'custom',
+      },
+    },
+    {
+      path: 'pages/my-shop/index',
+      aliasPath: '/my-shop',
+      name: 'my-shop',
+      style: {
+        navigationStyle: 'custom',
+      },
+    },
+    {
+      path: 'pages/rentals/index',
+      aliasPath: '/rentals',
+      name: 'rentals',
+      style: {
+        navigationStyle: 'custom',
+      },
+    },
+    {
+      path: 'pages/rentals/report',
+      aliasPath: '/rentals/report',
+      name: 'rentals-report',
+      style: {
+        navigationStyle: 'custom',
+      },
+    },
+    {
+      path: 'pages/checkout/index',
+      aliasPath: '/checkout',
+      name: 'checkout',
+      style: {
+        navigationStyle: 'custom',
+      },
+    },
+    {
+      path: 'pages/payment/index',
+      aliasPath: '/payment',
+      name: 'payment',
+      style: {
+        navigationStyle: 'custom',
+      },
+    },
+    {
+      path: 'pages/orders/index',
+      aliasPath: '/orders',
+      name: 'orders',
+      style: {
+        navigationStyle: 'custom',
+      },
+    },
+  ],
+  subPackages: [
+    {
+      root: 'pages/search',
+      pages: [
+        {
+          path: 'index',
+          aliasPath: '/search',
+          name: 'search',
+          style: {
+            navigationStyle: 'custom',
+          },
+        },
+      ],
+    },
+    {
+      root: 'pages/detail',
+      pages: [
+        {
+          path: 'index',
+          aliasPath: '/detail',
+          name: 'detail',
+          style: {
+            navigationStyle: 'custom',
+          },
+        },
+      ],
+    },
+  ],
+  globalStyle: {
+    navigationBarTitleText: appName,
+    navigationBarBackgroundColor: '#F5F5F1',
+    navigationBarTextStyle: 'black',
+    backgroundColor: '#F5F5F1',
+  },
+})

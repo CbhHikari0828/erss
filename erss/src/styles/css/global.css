@@ -1,0 +1,111 @@
+page {
+  font-size: 32rpx;
+  color: #111111;
+  background: #f5f5f1;
+  font-family: 'SF Pro Display', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+}
+
+view,
+text,
+button,
+input,
+textarea,
+swiper,
+swiper-item,
+scroll-view {
+  box-sizing: border-box;
+}
+
+.app-shell {
+  min-height: 100%;
+  padding: calc(var(--safe-top) + 24rpx) 24rpx calc(var(--safe-bottom) + 32rpx);
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.8), transparent 24%),
+    linear-gradient(180deg, #f7f6f2 0%, #f1f0eb 100%);
+}
+
+.app-shell--with-tabbar {
+  padding-bottom: calc(var(--safe-bottom) + 210rpx);
+}
+
+.section-title {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+
+.section-title__main {
+  font-size: 42rpx;
+  font-weight: 700;
+  color: #111111;
+  letter-spacing: 1rpx;
+}
+
+.section-title__sub {
+  margin-top: 10rpx;
+  color: #7d7d76;
+  font-size: 24rpx;
+  line-height: 1.6;
+}
+
+.card-panel {
+  border: 1rpx solid rgba(17, 17, 17, 0.06);
+  border-radius: 32rpx;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow:
+    0 4rpx 12rpx rgba(17, 17, 17, 0.03),
+    0 16rpx 40rpx rgba(17, 17, 17, 0.05);
+  backdrop-filter: blur(8rpx);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52rpx;
+  padding: 0 22rpx;
+  border-radius: 999rpx;
+  background: #eceae4;
+  color: #4d4d46;
+  font-size: 22rpx;
+  transition: all 0.2s ease;
+}
+
+.chip--active {
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+  color: #ffffff;
+  box-shadow: 0 4rpx 12rpx rgba(17, 17, 17, 0.12);
+}
+
+.ghost-button,
+.primary-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 88rpx;
+  border-radius: 24rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+
+.primary-button {
+  background: linear-gradient(135deg, #1a1a1a, #272727);
+  color: #ffffff;
+  box-shadow: 0 8rpx 24rpx rgba(17, 17, 17, 0.14);
+  &:active {
+    transform: scale(0.975);
+    opacity: 0.9;
+  }
+}
+
+.ghost-button {
+  border: 1rpx solid rgba(17, 17, 17, 0.1);
+  background: rgba(255, 255, 255, 0.88);
+  color: #111111;
+  box-shadow: 0 4rpx 12rpx rgba(17, 17, 17, 0.04);
+  &:active {
+    background: rgba(17, 17, 17, 0.04);
+  }
+}
