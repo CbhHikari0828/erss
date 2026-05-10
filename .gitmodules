@@ -1,0 +1,6 @@
+[submodule "erss"]
+	path = erss
+	url = https://github.com/CbhHikari0828/erss.git
+[submodule "vue-vben-admin"]
+	path = vue-vben-admin
+	url = https://github.com/CbhHikari0828/vue-vben-admin.git
