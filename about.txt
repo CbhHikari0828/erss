@@ -1,8 +1,15 @@
-另外现在需要确认一下逻辑，就是用户需要注册成为商户才能卖书/出租，当买家购买时需要交付对应的钱，如
-  果是租赁就需要交租金之外的押金押金由卖家来定，卖家也可以在发布商品的时候选择租赁或者关掉租赁，但
-  是必须发布购买，选择租赁才能填写押金，押金后面可以自己做修改。先看直接购买的逻辑，当买家购买之后
-  打钱是打给系统的由系统暂存，买家可以选择自提或者放在校园驿站，放在驿站需要加三块钱，这三块钱是归
-  于系统的，另外的钱才是卖家的，也就是书籍的总价格，当选择自提时，商品的状态就只有一个确认收货，此
-  时卖家那边的状态是等待收货，当买家确认收货之后才交由管理员审核审核通过之后才打钱给卖家并发送消息
-  在这期间卖家的状态是等待打钱，租赁的逻辑基本和购买的相同，但是不同的是多了一个报损，报损的话由管
-  理员审核之后再分别打钱，你看一下代码逻辑和我的描述一致吗
+docker pull minio/minio:RELEASE.2023-09-30T07-02-29Z
+
+docker run -d -p 9000:9000 -p 9090:9090 --name minio -v E:\docker\minio\data:/data -e "MINIO_ROOT_USER=quanxiaoha" -e "MINIO_ROOT_PASSWORD=quanxiaoha" minio/minio:RELEASE.2023-09-30T07-02-29Z server /data --console-address ":9090"
+
+
+docker pull mysql:8.0
+
+docker run -d `
+  --name mysql `
+  -p 3306:3306 `
+  -e MYSQL_ROOT_PASSWORD=123456 `
+  -v E:\docker\mysql\data:/var/lib/mysql `
+  -v E:\docker\mysql\conf:/etc/mysql/conf.d `
+  --restart=always `
+  mysql:8.0
